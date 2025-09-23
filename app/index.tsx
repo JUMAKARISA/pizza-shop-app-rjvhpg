@@ -66,8 +66,9 @@ export default function PizzaShopApp() {
   const renderHomeScreen = () => (
     <ScrollView style={styles.scrollView} showsVerticalScrollIndicator={false}>
       <View style={styles.heroSection}>
-        <Text style={styles.heroTitle}>Mario&apos;s Pizza</Text>
+        <Text style={styles.heroTitle}>Juma Anderson</Text>
         <Text style={styles.heroSubtitle}>Authentic Italian Pizza</Text>
+        <Text style={styles.heroLocation}>📍 Watamu</Text>
         <Text style={styles.heroDescription}>
           Fresh ingredients, traditional recipes, and a passion for perfection
         </Text>
@@ -292,8 +293,17 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     color: colors.backgroundAlt,
     textAlign: 'center',
-    marginBottom: 12,
+    marginBottom: 8,
     fontFamily: 'Montserrat_600SemiBold',
+  },
+  heroLocation: {
+    fontSize: 16,
+    fontWeight: '500',
+    color: colors.backgroundAlt,
+    textAlign: 'center',
+    marginBottom: 12,
+    opacity: 0.9,
+    fontFamily: 'OpenSans_500Medium',
   },
   heroDescription: {
     fontSize: 16,
