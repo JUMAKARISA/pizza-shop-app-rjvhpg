@@ -15,7 +15,7 @@ export default function BottomTabBar({ activeTab, onTabPress, cartItemCount }: B
     { id: 'home', name: 'Home', icon: 'home' as const },
     { id: 'menu', name: 'Menu', icon: 'restaurant' as const },
     { id: 'cart', name: 'Cart', icon: 'bag' as const },
-    { id: 'orders', name: 'Orders', icon: 'receipt' as const },
+    { id: 'about', name: 'About', icon: 'information-circle' as const },
   ];
 
   return (
