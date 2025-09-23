@@ -90,6 +90,18 @@ export default function PizzaShopApp() {
         </View>
       </View>
 
+      {/* Restaurant Image Section */}
+      <View style={styles.restaurantImageSection}>
+        <Image 
+          source={require('../assets/images/05f1a597-82f3-47dd-8b16-5d287a03598b.jpeg')}
+          style={styles.restaurantImage}
+          resizeMode="cover"
+        />
+        <View style={styles.imageOverlay}>
+          <Text style={styles.imageOverlayText}>Experience Dining in Paradise</Text>
+        </View>
+      </View>
+
       <View style={styles.featuresSection}>
         <Text style={styles.sectionTitle}>Why Choose Us?</Text>
         
@@ -120,12 +132,52 @@ export default function PizzaShopApp() {
         </View>
       </View>
 
+      {/* Contact Information Section */}
+      <View style={styles.contactInfoSection}>
+        <Text style={styles.contactInfoTitle}>Get in Touch</Text>
+        <Text style={styles.contactInfoSubtitle}>Ready to order? Contact us now!</Text>
+        
+        <View style={styles.contactInfoCard}>
+          <View style={styles.contactInfoItem}>
+            <Text style={styles.contactInfoIcon}>📞</Text>
+            <View style={styles.contactInfoDetails}>
+              <Text style={styles.contactInfoLabel}>Call Us</Text>
+              <Text style={styles.contactInfoValue}>0733349737</Text>
+            </View>
+          </View>
+          
+          <View style={styles.contactInfoItem}>
+            <Text style={styles.contactInfoIcon}>✉️</Text>
+            <View style={styles.contactInfoDetails}>
+              <Text style={styles.contactInfoLabel}>Email</Text>
+              <Text style={styles.contactInfoValue}>jkarisa7@gmail.com</Text>
+            </View>
+          </View>
+          
+          <View style={styles.contactInfoItem}>
+            <Text style={styles.contactInfoIcon}>📷</Text>
+            <View style={styles.contactInfoDetails}>
+              <Text style={styles.contactInfoLabel}>Instagram</Text>
+              <Text style={styles.contactInfoValue}>@jumaanderson5</Text>
+            </View>
+          </View>
+          
+          <View style={styles.contactInfoItem}>
+            <Text style={styles.contactInfoIcon}>📍</Text>
+            <View style={styles.contactInfoDetails}>
+              <Text style={styles.contactInfoLabel}>Location</Text>
+              <Text style={styles.contactInfoValue}>Watamu, Kenya</Text>
+            </View>
+          </View>
+        </View>
+      </View>
+
       {/* Quick Contact Section */}
       <View style={styles.quickContactSection}>
         <Text style={styles.quickContactTitle}>Visit Us Today!</Text>
         <View style={styles.quickContactInfo}>
           <Text style={styles.quickContactText}>📍 Watamu, Kenya</Text>
-          <Text style={styles.quickContactText}>📞 +254 700 123 456</Text>
+          <Text style={styles.quickContactText}>📞 0733349737</Text>
           <Text style={styles.quickContactText}>🕒 Open Daily 11AM - 10PM</Text>
         </View>
         <TouchableOpacity
@@ -284,7 +336,7 @@ export default function PizzaShopApp() {
             <Text style={styles.contactIcon}>📞</Text>
             <View style={styles.contactInfo}>
               <Text style={styles.contactLabel}>Phone</Text>
-              <Text style={styles.contactValue}>+254 700 123 456</Text>
+              <Text style={styles.contactValue}>0733349737</Text>
             </View>
           </View>
           
@@ -292,7 +344,15 @@ export default function PizzaShopApp() {
             <Text style={styles.contactIcon}>✉️</Text>
             <View style={styles.contactInfo}>
               <Text style={styles.contactLabel}>Email</Text>
-              <Text style={styles.contactValue}>info@jumaanderson.co.ke</Text>
+              <Text style={styles.contactValue}>jkarisa7@gmail.com</Text>
+            </View>
+          </View>
+          
+          <View style={styles.contactItem}>
+            <Text style={styles.contactIcon}>📷</Text>
+            <View style={styles.contactInfo}>
+              <Text style={styles.contactLabel}>Instagram</Text>
+              <Text style={styles.contactValue}>@jumaanderson5</Text>
             </View>
           </View>
           
@@ -500,6 +560,32 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     fontFamily: 'OpenSans_600SemiBold',
   },
+  // Restaurant Image Section
+  restaurantImageSection: {
+    position: 'relative',
+    height: 250,
+    marginBottom: 20,
+  },
+  restaurantImage: {
+    width: '100%',
+    height: '100%',
+  },
+  imageOverlay: {
+    position: 'absolute',
+    bottom: 0,
+    left: 0,
+    right: 0,
+    backgroundColor: 'rgba(0, 0, 0, 0.6)',
+    paddingVertical: 16,
+    paddingHorizontal: 20,
+  },
+  imageOverlayText: {
+    color: colors.backgroundAlt,
+    fontSize: 20,
+    fontWeight: '700',
+    textAlign: 'center',
+    fontFamily: 'Montserrat_700Bold',
+  },
   featuresSection: {
     padding: 20,
   },
@@ -550,6 +636,62 @@ const styles = StyleSheet.create({
     color: colors.textLight,
     textAlign: 'center',
     fontFamily: 'OpenSans_400Regular',
+  },
+  // Contact Information Section
+  contactInfoSection: {
+    padding: 20,
+    backgroundColor: colors.backgroundAlt,
+  },
+  contactInfoTitle: {
+    fontSize: 24,
+    fontWeight: '700',
+    color: colors.text,
+    textAlign: 'center',
+    marginBottom: 8,
+    fontFamily: 'Montserrat_700Bold',
+  },
+  contactInfoSubtitle: {
+    fontSize: 16,
+    color: colors.textLight,
+    textAlign: 'center',
+    marginBottom: 20,
+    fontFamily: 'OpenSans_400Regular',
+  },
+  contactInfoCard: {
+    backgroundColor: colors.card,
+    borderRadius: 16,
+    padding: 20,
+    boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.1)',
+    elevation: 4,
+  },
+  contactInfoItem: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingVertical: 12,
+    borderBottomWidth: 1,
+    borderBottomColor: colors.border,
+  },
+  contactInfoIcon: {
+    fontSize: 24,
+    marginRight: 16,
+    width: 32,
+    textAlign: 'center',
+  },
+  contactInfoDetails: {
+    flex: 1,
+  },
+  contactInfoLabel: {
+    fontSize: 14,
+    fontWeight: '500',
+    color: colors.textLight,
+    marginBottom: 2,
+    fontFamily: 'OpenSans_500Medium',
+  },
+  contactInfoValue: {
+    fontSize: 18,
+    fontWeight: '600',
+    color: colors.text,
+    fontFamily: 'OpenSans_600SemiBold',
   },
   menuHeader: {
     padding: 20,
